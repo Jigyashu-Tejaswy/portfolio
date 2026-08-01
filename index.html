@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jigyashu Tejaswy | Software Engineer & ML Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- Particle canvas -->
+  <canvas id="particles"></canvas>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">&lt;</span>JT<span class="logo-bracket">/&gt;</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#hero" class="mobile-link">Home</a></li>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#skills" class="mobile-link">Skills</a></li>
+      <li><a href="#research" class="mobile-link">Research</a></li>
+      <li><a href="#projects" class="mobile-link">Projects</a></li>
+      <li><a href="#achievements" class="mobile-link">Achievements</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg-gradient"></div>
+    <div class="hero-content">
+      <div class="hero-tag reveal-up">Available for Opportunities</div>
+      <h1 class="hero-name reveal-up">
+        <span class="name-line">Jigyashu</span>
+        <span class="name-line gradient-text">Tejaswy</span>
+      </h1>
+      <div class="hero-roles reveal-up">
+        <span>I build </span>
+        <span class="typed-text" id="typedText"></span>
+        <span class="typed-cursor">|</span>
+      </div>
+      <p class="hero-desc reveal-up">
+        Software Engineer &amp; ML Developer at <span class="highlight">IIIT Gwalior</span> —
+        crafting scalable backend systems, REST APIs, and end-to-end ML applications.
+      </p>
+      <div class="hero-cta reveal-up">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-outline">Get in Touch</a>
+      </div>
+      <div class="hero-socials reveal-up">
+        <a href="https://www.linkedin.com/in/jigyashu-tejaswy-1373b2371?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Jigyashu-Tejaswy" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://leetcode.com/u/Jigyashu_Tejaswy/" target="_blank" aria-label="LeetCode"><i class="fas fa-code"></i></a>
+        <a href="mailto:01082004jigyashu@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-orb orb-1"></div>
+      <div class="hero-orb orb-2"></div>
+      <div class="hero-orb orb-3"></div>
+      <div class="code-card floating">
+        <div class="code-card-header">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span class="code-filename">model.py</span>
+        </div>
+        <pre class="code-snippet"><code><span class="c-purple">class</span> <span class="c-blue">PINN</span>(nn.Module):
+  <span class="c-purple">def</span> <span class="c-green">__init__</span>(self):
+    <span class="c-pink">super</span>().__init__()
+    self.net = <span class="c-blue">DeepNet</span>(
+      layers=[<span class="c-orange">2</span>,<span class="c-orange">64</span>,<span class="c-orange">64</span>,<span class="c-orange">1</span>]
+    )
+  <span class="c-comment"># MSE: 1.6e-08 ✓</span></code></pre>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-dot"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Get to Know Me</span>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-left reveal-left">
+          <div class="about-avatar">
+            <div class="avatar-ring"></div>
+            <div class="avatar-initials">JT</div>
+            <div class="avatar-badge"><i class="fas fa-code"></i></div>
+          </div>
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-num" data-target="300">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">LeetCode Problems</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num" data-target="8">0</span><span class="stat-dot">.</span><span class="stat-num2">00</span>
+              <span class="stat-label">CGPA / 10</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num" data-target="15">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">API Endpoints Built</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-right reveal-right">
+          <p class="about-text">
+            I'm a <span class="highlight">Software Engineer and Machine Learning developer</span> pursuing a B.Tech in Mathematics and Scientific Computing at IIIT Gwalior (Class of 2027).
+          </p>
+          <p class="about-text">
+            I have hands-on experience building <span class="highlight">scalable backend systems</span>, REST APIs, and end-to-end ML applications. My work spans from building physics-informed neural networks that solve PDEs, to engineering full-stack trading platforms with deep learning at their core.
+          </p>
+          <p class="about-text">
+            I'm proficient in <span class="highlight">Python, C++, PyTorch, TensorFlow, and FastAPI</span>, with strong foundations in data structures, algorithms, and system design. I'm actively seeking Software Engineering / ML roles where I can ship production-grade, data-driven products.
+          </p>
+          <div class="about-edu">
+            <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div class="edu-info">
+              <strong>IIIT Gwalior</strong>
+              <span>B.Tech in Mathematics &amp; Scientific Computing</span>
+              <span class="edu-meta">Aug 2023 – May 2027 &nbsp;|&nbsp; CGPA: 8.00/10</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What I Work With</span>
+        <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-card reveal-up" data-delay="0">
+          <div class="skill-card-icon"><i class="fas fa-code"></i></div>
+          <h3>Languages</h3>
+          <div class="skill-tags">
+            <span class="tag">Python</span><span class="tag">C++</span>
+            <span class="tag">Java</span><span class="tag">JavaScript</span>
+            <span class="tag">SQL</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal-up" data-delay="100">
+          <div class="skill-card-icon"><i class="fas fa-server"></i></div>
+          <h3>Backend</h3>
+          <div class="skill-tags">
+            <span class="tag">FastAPI</span><span class="tag">Node.js</span>
+            <span class="tag">Express.js</span><span class="tag">REST APIs</span>
+            <span class="tag">JWT Auth</span><span class="tag">WebSockets</span>
+            <span class="tag">Microservices</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal-up" data-delay="200">
+          <div class="skill-card-icon"><i class="fas fa-palette"></i></div>
+          <h3>Frontend</h3>
+          <div class="skill-tags">
+            <span class="tag">React</span><span class="tag">HTML5</span>
+            <span class="tag">CSS3</span><span class="tag">Tailwind CSS</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal-up" data-delay="300">
+          <div class="skill-card-icon"><i class="fas fa-brain"></i></div>
+          <h3>Machine Learning</h3>
+          <div class="skill-tags">
+            <span class="tag">PyTorch</span><span class="tag">TensorFlow</span>
+            <span class="tag">Scikit-learn</span><span class="tag">Pandas</span>
+            <span class="tag">NumPy</span><span class="tag">Deep Learning</span>
+            <span class="tag">LSTM</span><span class="tag">Feature Engineering</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal-up" data-delay="400">
+          <div class="skill-card-icon"><i class="fas fa-atom"></i></div>
+          <h3>Scientific Computing</h3>
+          <div class="skill-tags">
+            <span class="tag">SciPy</span><span class="tag">Matplotlib</span>
+            <span class="tag">PINNs</span><span class="tag">Numerical Methods</span>
+            <span class="tag">PDE/PIDE Solvers</span><span class="tag">L-BFGS</span>
+            <span class="tag">Auto Diff</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal-up" data-delay="500">
+          <div class="skill-card-icon"><i class="fas fa-database"></i></div>
+          <h3>Databases &amp; DevOps</h3>
+          <div class="skill-tags">
+            <span class="tag">PostgreSQL</span><span class="tag">MySQL</span>
+            <span class="tag">MongoDB</span><span class="tag">Docker</span>
+            <span class="tag">Git</span><span class="tag">AWS</span>
+            <span class="tag">CI/CD</span><span class="tag">Linux</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH -->
+  <section id="research">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Academic Work</span>
+        <h2 class="section-title">Research <span class="gradient-text">Experience</span></h2>
+      </div>
+      <div class="research-card reveal-up">
+        <div class="research-header">
+          <div class="research-icon"><i class="fas fa-flask"></i></div>
+          <div class="research-meta">
+            <h3>Physics-Informed Neural Networks for Option Pricing under Jump-Diffusion</h3>
+            <span class="research-sub">Independent Research Project, IIIT Gwalior</span>
+            <div class="research-tags">
+              <span class="tag tag-alt">Python</span><span class="tag tag-alt">PyTorch</span>
+              <span class="tag tag-alt">NumPy</span><span class="tag tag-alt">SciPy</span>
+              <span class="tag tag-alt">Matplotlib</span>
+            </div>
+          </div>
+          <div class="research-date">
+            <i class="fas fa-calendar-alt"></i> Jun 2026 – Present
+          </div>
+        </div>
+        <div class="research-bullets">
+          <div class="bullet-item">
+            <span class="bullet-icon"><i class="fas fa-chevron-right"></i></span>
+            <p>Built a mesh-free <strong>physics-informed neural network (PINN)</strong> in PyTorch to solve the partial integro-differential equation governing European option pricing under the <strong>Merton and Kou jump-diffusion models</strong>, covering 5 benchmark experiments.</p>
+          </div>
+          <div class="bullet-item">
+            <span class="bullet-icon"><i class="fas fa-chevron-right"></i></span>
+            <p>Resolved the non-local jump integral by discretising with <strong>composite-trapezoidal quadrature (200 nodes)</strong>, reducing the PIDE to a PDE residual trainable end-to-end with full-batch L-BFGS.</p>
+          </div>
+          <div class="bullet-item">
+            <span class="bullet-icon"><i class="fas fa-chevron-right"></i></span>
+            <p>Achieved <strong>1.6e-08 MSE</strong> on smooth benchmarks — <strong>6.4× lower error</strong> than a baseline 256×256 finite-difference solver — over a 128×128 grid of 16,384 test points.</p>
+          </div>
+          <div class="bullet-item">
+            <span class="bullet-icon"><i class="fas fa-chevron-right"></i></span>
+            <p>Extracted risk sensitivities (<strong>Delta, Gamma, Theta</strong>) via automatic differentiation with zero extra training; shipped 14 modular components (~1,000 LOC) with reproducible experiment runners.</p>
+          </div>
+        </div>
+        <div class="research-metrics">
+          <div class="metric">
+            <span class="metric-val">1.6e-08</span>
+            <span class="metric-label">MSE (smooth)</span>
+          </div>
+          <div class="metric">
+            <span class="metric-val">6.4×</span>
+            <span class="metric-label">Lower error vs FD</span>
+          </div>
+          <div class="metric">
+            <span class="metric-val">5</span>
+            <span class="metric-label">Benchmarks</span>
+          </div>
+          <div class="metric">
+            <span class="metric-val">~1K</span>
+            <span class="metric-label">Lines of Code</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What I've Built</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+      </div>
+      <div class="projects-grid">
+
+        <!-- AI Trading Agent -->
+        <div class="project-card reveal-up" data-delay="0">
+          <div class="project-glow"></div>
+          <div class="project-header">
+            <div class="project-icon ai-icon"><i class="fas fa-chart-line"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/Jigyashu-Tejaswy/Autonomous_Trading_Agent" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">AI Trading Agent</h3>
+          <p class="project-desc">End-to-end AI trading platform using <strong>LSTM deep-learning models</strong> to forecast equity price movements, backtested across 5+ years of historical market data.</p>
+          <ul class="project-bullets">
+            <li>15+ REST API endpoints for broker integration &amp; automated execution</li>
+            <li>Cut manual trade-setup time by <strong>80%</strong></li>
+            <li>Containerized full stack with Docker</li>
+          </ul>
+          <div class="project-tags">
+            <span class="tag">Python</span><span class="tag">TensorFlow</span>
+            <span class="tag">FastAPI</span><span class="tag">PostgreSQL</span>
+            <span class="tag">Docker</span>
+          </div>
+        </div>
+
+        <!-- EdTech Platform -->
+        <div class="project-card reveal-up" data-delay="150">
+          <div class="project-glow"></div>
+          <div class="project-header">
+            <div class="project-icon edu-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/Jigyashu-Tejaswy/EdTechnology" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">EdTech Learning Platform</h3>
+          <p class="project-desc">Full-stack learning platform serving <strong>quizzes, course management, and progress tracking</strong> with a responsive React UI and role-based access control.</p>
+          <ul class="project-bullets">
+            <li>20+ RESTful endpoints with JWT authentication</li>
+            <li>Role-based access for students and instructors</li>
+            <li>Real-time user progress &amp; course analytics</li>
+          </ul>
+          <div class="project-tags">
+            <span class="tag">React</span><span class="tag">Node.js</span>
+            <span class="tag">Express.js</span><span class="tag">MongoDB</span>
+            <span class="tag">JWT</span>
+          </div>
+        </div>
+
+        <!-- House Price Prediction -->
+        <div class="project-card reveal-up" data-delay="300">
+          <div class="project-glow"></div>
+          <div class="project-header">
+            <div class="project-icon ml-icon"><i class="fas fa-home"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/Jigyashu-Tejaswy/House_Predictor_Basic-LinearRegression" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">ML House Price Prediction</h3>
+          <p class="project-desc">Comparative ML study building and evaluating <strong>4+ regression models</strong> with full data cleaning, EDA, and feature engineering pipeline.</p>
+          <ul class="project-bullets">
+            <li>Models: Linear, Ridge, Random Forest, Gradient Boosting</li>
+            <li>Strong R² via hyperparameter tuning &amp; cross-validation</li>
+            <li>Evaluated with RMSE and MAE metrics</li>
+          </ul>
+          <div class="project-tags">
+            <span class="tag">Python</span><span class="tag">Scikit-learn</span>
+            <span class="tag">Pandas</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section id="achievements">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Milestones</span>
+        <h2 class="section-title">Achievements &amp; <span class="gradient-text">Certifications</span></h2>
+      </div>
+      <div class="ach-grid">
+
+        <div class="ach-card reveal-up" data-delay="0">
+          <div class="ach-icon"><i class="fas fa-code"></i></div>
+          <div class="ach-content">
+            <h3>300+ LeetCode Problems</h3>
+            <p>Solved 300+ Data Structures &amp; Algorithms problems, demonstrating strong problem-solving and algorithmic thinking.</p>
+            <a href="https://leetcode.com/u/Jigyashu_Tejaswy/" target="_blank" class="ach-link">View Profile <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="ach-card reveal-up" data-delay="100">
+          <div class="ach-icon"><i class="fas fa-trophy"></i></div>
+          <div class="ach-content">
+            <h3>JEE Main: 98.44 Percentile</h3>
+            <p>Ranked AIR 18,230 among 1.1M+ candidates nationwide — a testament to exceptional analytical and mathematical ability.</p>
+          </div>
+        </div>
+
+        <div class="ach-card reveal-up" data-delay="200">
+          <div class="ach-icon"><i class="fas fa-star"></i></div>
+          <div class="ach-content">
+            <h3>Academic Excellence</h3>
+            <p>CBSE Class XII: <strong>95.8%</strong> &nbsp;|&nbsp; Class X: <strong>97.2%</strong> — consistent top-tier academic performance throughout schooling.</p>
+          </div>
+        </div>
+
+        <div class="ach-card reveal-up" data-delay="300">
+          <div class="ach-icon"><i class="fas fa-certificate"></i></div>
+          <div class="ach-content">
+            <h3>ML Specialization — Coursera</h3>
+            <p>Completed Andrew Ng's Machine Learning Specialization (DeepLearning.AI): Supervised &amp; Unsupervised Learning, Neural Networks, Recommender Systems, Reinforcement Learning.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Coursework -->
+      <div class="coursework reveal-up">
+        <h3><i class="fas fa-book-open"></i> Relevant Coursework</h3>
+        <div class="course-tags">
+          <span class="tag">Data Structures &amp; Algorithms</span>
+          <span class="tag">Object-Oriented Programming</span>
+          <span class="tag">Operating Systems</span>
+          <span class="tag">Database Management Systems</span>
+          <span class="tag">Software Engineering</span>
+          <span class="tag">Machine Learning</span>
+          <span class="tag">Probability &amp; Statistics</span>
+          <span class="tag">Optimization Techniques</span>
+          <span class="tag">Multivariate Data Analysis</span>
+          <span class="tag">Advanced Numerical Methods</span>
+          <span class="tag">Fuzzy Sets</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Let's Connect</span>
+        <h2 class="section-title">Get in <span class="gradient-text">Touch</span></h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-left reveal-left">
+          <p class="contact-intro">I'm actively looking for Software Engineering and ML roles. Whether it's a full-time position, internship, or just a tech chat — my inbox is always open.</p>
+          <div class="contact-links">
+            <a href="mailto:01082004jigyashu@gmail.com" class="contact-item">
+              <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+              <div class="contact-item-info">
+                <span class="contact-item-label">Email</span>
+                <span class="contact-item-val">01082004jigyashu@gmail.com</span>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/jigyashu-tejaswy-1373b2371?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="contact-item">
+              <div class="contact-item-icon"><i class="fab fa-linkedin"></i></div>
+              <div class="contact-item-info">
+                <span class="contact-item-label">LinkedIn</span>
+                <span class="contact-item-val">linkedin.com/in/JigyashuTejaswy</span>
+              </div>
+            </a>
+            <a href="https://github.com/Jigyashu-Tejaswy" target="_blank" class="contact-item">
+              <div class="contact-item-icon"><i class="fab fa-github"></i></div>
+              <div class="contact-item-info">
+                <span class="contact-item-label">GitHub</span>
+                <span class="contact-item-val">github.com/Jigyashu-Tejaswy</span>
+              </div>
+            </a>
+            <a href="tel:+919660815966" class="contact-item">
+              <div class="contact-item-icon"><i class="fas fa-phone"></i></div>
+              <div class="contact-item-info">
+                <span class="contact-item-label">Phone</span>
+                <span class="contact-item-val">+91-9660815966</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="contact-right reveal-right">
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <input type="text" id="name" placeholder="Your Name" required autocomplete="off" />
+              <label for="name">Your Name</label>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" placeholder="Your Email" required autocomplete="off" />
+              <label for="email">Your Email</label>
+            </div>
+            <div class="form-group">
+              <input type="text" id="subject" placeholder="Subject" required autocomplete="off" />
+              <label for="subject">Subject</label>
+            </div>
+            <div class="form-group">
+              <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+              <label for="message">Your Message</label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              <span>Send Message</span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <span class="logo-bracket">&lt;</span>JT<span class="logo-bracket">/&gt;</span>
+      </div>
+      <p>Designed &amp; Built by <span class="gradient-text">Jigyashu Tejaswy</span></p>
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/jigyashu-tejaswy-1373b2371?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Jigyashu-Tejaswy" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://leetcode.com/u/Jigyashu_Tejaswy/" target="_blank"><i class="fas fa-code"></i></a>
+        <a href="mailto:01082004jigyashu@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Jigyashu Tejaswy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
